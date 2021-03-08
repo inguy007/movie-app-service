@@ -1,0 +1,27 @@
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   http://www.liquibase.org/xml/ns/dbchangelog 
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    
+    <changeSet author="idas" id="20012021155700">
+        <createTable tableName="MOVIE_INFO">
+        	<column name="ID" type="VARCHAR(255)">
+        		<constraints primaryKey="true" nullable="false"/>
+        	</column>
+			<column name="TITLE" type="VARCHAR(100)"/>
+			<column name="RELEASE_DATE" type="DATETIME"/>
+			<column name="RELEASE_YEAR" type="INT"/>
+			<column name="GENRE" type="VARCHAR(1024)"/> 
+			<column name="ACTORS" type="VARCHAR(1024)"/>
+			<column name="POSTER_URL" type="VARCHAR(1024)"/> 
+			<column name="DURATION" type="VARCHAR(255)"/>
+			<column name="PLOT" type="TEXT"/>        
+        </createTable> 
+    </changeSet>
+    
+    
+</databaseChangeLog>

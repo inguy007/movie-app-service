@@ -1,0 +1,21 @@
+type Query{
+	getAllMovies: [Movie]
+	getMovie(id : String) : Movie
+}
+
+type Movie {
+	movieId: String
+	title: String
+	releaseDate: String
+	releaseYear: String
+	genres: [String]
+	actors: [Actor]
+	posterUrl: String
+	duration: String
+	storyLine: String
+}
+
+type Actor {
+	name: String
+	age: String
+}

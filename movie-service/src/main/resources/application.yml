@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /movieapp
+    
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/movieapp
+    username: root
+    password: zaloni.1234
+  liquibase:
+    change-log: classpath:/db/db-master.xml
+    enabled: true
