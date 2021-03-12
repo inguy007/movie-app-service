@@ -9,5 +9,7 @@ public interface MovieService {
 	List<Movie> getAllMovies();
 	
 	Movie getMovie(String movieId);
+	
+	Movie extractMovieDetails(String source);
 
 }

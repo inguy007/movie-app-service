@@ -1,2 +1,15 @@
 server:
   port: 8081
+  
+spring:
+  application:
+    name: content-service
+  cloud:
+    consul:
+      discovery:
+        instanceId: ${spring.application.name}:${random.value}
+        heartbeat:
+          enabled: true
+        health-check-path: /actuator/health
+      host: localhost
+      port: 8500

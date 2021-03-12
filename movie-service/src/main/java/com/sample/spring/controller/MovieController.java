@@ -14,12 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sample.spring.model.Movie;
 import com.sample.spring.repository.MovieRepository;
 import com.sample.spring.service.MovieGraphQL;
+import com.sample.spring.service.MovieService;
 
 @RestController
 public class MovieController {
 
 	@Autowired
 	private MovieRepository movieRepository;
+	
+	@Autowired
+	private MovieService movieService;
 
 	@Autowired
 	private MovieGraphQL movieGraphQL;
@@ -43,6 +47,11 @@ public class MovieController {
 	@PostMapping("/movies/graphQL")
 	public ResponseEntity<Object> moviesGraphQL(@RequestBody String query) {
 		return ResponseEntity.of(Optional.of(movieGraphQL.execute(query)));
+	}
+	
+	@PostMapping("/movies/extract")
+	public ResponseEntity<Movie> extractMovieDetails(@RequestBody String source){
+		return ResponseEntity.ok(movieService.extractMovieDetails(source));
 	}
 
 }
