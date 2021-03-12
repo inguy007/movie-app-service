@@ -22,6 +22,11 @@
 			<column name="PLOT" type="TEXT"/>        
         </createTable> 
     </changeSet>
+    <changeSet author="idas" id="20012021155701">
+    	<addColumn tableName="MOVIE_INFO">
+    		<column name="BOX_OFFICE" type="TEXT"/>
+    	</addColumn>
+    </changeSet>
     
     
 </databaseChangeLog>

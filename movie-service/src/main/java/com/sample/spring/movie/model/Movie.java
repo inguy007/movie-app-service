@@ -51,5 +51,8 @@ public class Movie {
 	
 	@Column(name="PLOT")
 	private String storyline;
+	
+	@Column(name="BOX_OFFICE")
+	private String boxOffice;
 
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.sample.spring.movie.extraction.MovieDetailsExtractor;
 import com.sample.spring.movie.model.Movie;
 import com.sample.spring.movie.model.Movie.MovieBuilder;
 import com.sample.spring.movie.repository.MovieRepository;
@@ -39,19 +40,8 @@ public class MovieServiceImpl implements MovieService{
 		request.put("contentPath",source);
 		request.put("type", "HTML");
 		Map<String,Object> contentMap = restTemplate.postForObject(contentServiceURL, request, Map.class);
-		System.out.println("Content Map :"+contentMap);
-		MovieBuilder movie = Movie.builder();
-		for(Entry<String,Object> contentEntry : contentMap.entrySet()) {
-			String value = String.valueOf(contentEntry.getValue());
-			if(contentEntry.getKey().contains("title")) {
-				movie.title(value);
-			}else if((contentEntry.getKey().contains("image")) || (contentEntry.getKey().contains("poster"))){
-				movie.posterurl(value);
-			}else if((contentEntry.getKey().contains("Storyline")) || (contentEntry.getKey().contains("story")) || (contentEntry.getKey().contains("Plot"))) {
-				movie.storyline(value);
-			}
-		}
-		return movie.build();
+		System.out.println("Content Map :"+contentMap.keySet());
+		return MovieDetailsExtractor.extractMovieDetails(contentMap);
 	}
 
 }

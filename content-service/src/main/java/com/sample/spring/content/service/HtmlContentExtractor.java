@@ -30,7 +30,7 @@ public class HtmlContentExtractor {
 	}
 
 	public static void main(String[] args) throws MalformedURLException, IOException {
-		Document doc = Jsoup.parse(new URL("https://en.wikipedia.org/wiki/Shootout_at_Wadala"), 500000);
+		Document doc = Jsoup.parse(new URL("https://www.imdb.com/title/tt2301155/"), 500000);
 		Map<String, Object> contentMap = new HashMap<>();
 		processHeaders(doc, "h1", contentMap);
 		processHeaders(doc, "h2", contentMap);
@@ -46,7 +46,7 @@ public class HtmlContentExtractor {
 				System.out.println("HEADER :" + headers.get(i).text());
 				StringBuilder contentBuilder = new StringBuilder("");
 				Element currentHeaderElement = headers.get(i);
-				if (currentHeaderElement.nextElementSibling() != null && !currentHeaderElement.nextElementSibling().tagName().matches("^h[1-3]")) {
+				if (currentHeaderElement.nextElementSibling() != null) {
 					readContent(currentHeaderElement.nextElementSibling(), headerTag, contentBuilder);
 				}
 				contentMap.put(headers.get(i).text(), contentBuilder.toString());
@@ -64,5 +64,6 @@ public class HtmlContentExtractor {
 		}
 
 	}
+	
 
 }
