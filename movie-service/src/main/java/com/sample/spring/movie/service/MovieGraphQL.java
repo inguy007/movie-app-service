@@ -1,4 +1,4 @@
-package com.sample.spring.service;
+package com.sample.spring.movie.service;
 
 import java.io.IOException;
 

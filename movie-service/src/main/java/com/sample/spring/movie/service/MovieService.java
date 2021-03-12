@@ -1,8 +1,8 @@
-package com.sample.spring.service;
+package com.sample.spring.movie.service;
 
 import java.util.List;
 
-import com.sample.spring.model.Movie;
+import com.sample.spring.movie.model.Movie;
 
 public interface MovieService {
 	

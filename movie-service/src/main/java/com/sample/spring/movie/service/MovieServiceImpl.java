@@ -1,4 +1,4 @@
-package com.sample.spring.service;
+package com.sample.spring.movie.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.sample.spring.model.Movie;
-import com.sample.spring.model.Movie.MovieBuilder;
-import com.sample.spring.repository.MovieRepository;
+import com.sample.spring.movie.model.Movie;
+import com.sample.spring.movie.model.Movie.MovieBuilder;
+import com.sample.spring.movie.repository.MovieRepository;
 
 @Service
 public class MovieServiceImpl implements MovieService{

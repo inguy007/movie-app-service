@@ -1,4 +1,4 @@
-package com.sample.spring.vo;
+package com.sample.spring.content.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

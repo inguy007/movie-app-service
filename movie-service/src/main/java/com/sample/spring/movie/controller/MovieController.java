@@ -1,4 +1,4 @@
-package com.sample.spring.controller;
+package com.sample.spring.movie.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sample.spring.model.Movie;
-import com.sample.spring.repository.MovieRepository;
-import com.sample.spring.service.MovieGraphQL;
-import com.sample.spring.service.MovieService;
+import com.sample.spring.movie.model.Movie;
+import com.sample.spring.movie.repository.MovieRepository;
+import com.sample.spring.movie.service.MovieGraphQL;
+import com.sample.spring.movie.service.MovieService;
 
 @RestController
 public class MovieController {

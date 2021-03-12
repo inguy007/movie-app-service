@@ -1,4 +1,4 @@
-package com.sample.spring.model;
+package com.sample.spring.movie.model;
 
 import java.util.Date;
 

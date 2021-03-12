@@ -1,4 +1,4 @@
-package com.sample.spring.config;
+package com.sample.spring.movie.config;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,8 +14,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.stream.JsonReader;
-import com.sample.spring.model.Movie;
-import com.sample.spring.repository.MovieRepository;
+import com.sample.spring.movie.model.Movie;
+import com.sample.spring.movie.repository.MovieRepository;
 
 //@Configuration
 public class DataLoader {

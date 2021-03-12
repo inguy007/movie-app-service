@@ -1,4 +1,4 @@
-package com.sample.spring.controller;
+package com.sample.spring.content.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sample.spring.content.service.ContentExtractionService;
-import com.sample.spring.vo.ExtractionRequestVO;
+import com.sample.spring.content.vo.ExtractionRequestVO;
 
 @RestController
 public class ContentController {
