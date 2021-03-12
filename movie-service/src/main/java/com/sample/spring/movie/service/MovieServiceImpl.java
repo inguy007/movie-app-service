@@ -3,7 +3,6 @@ package com.sample.spring.movie.service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 import com.sample.spring.movie.extraction.MovieDetailsExtractor;
 import com.sample.spring.movie.model.Movie;
-import com.sample.spring.movie.model.Movie.MovieBuilder;
 import com.sample.spring.movie.repository.MovieRepository;
 
 @Service

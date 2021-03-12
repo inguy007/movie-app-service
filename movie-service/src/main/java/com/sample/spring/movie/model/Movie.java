@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -32,6 +34,7 @@ public class Movie {
 	private String title;
 	
 	@Column(name="RELEASE_DATE")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd MMM yyyy")
 	private Date releaseDate;
 	
 	@Column(name="RELEASE_YEAR")
